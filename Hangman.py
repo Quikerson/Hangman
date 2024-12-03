@@ -24,6 +24,9 @@ def hangman():
     while len(word_letters) > 0 and lives > 0:
         #letters used
         #' '.join(['a', 'b', 'cd'])  --> 'a b cd'
+        print("------------")
+        print("--------------")
+        print("----------------")
         print('You have', lives, 'lives left and you have used these letters', ' '.join(used_letters))
 
         #what current word is (ie W - R D)
@@ -40,19 +43,26 @@ def hangman():
             else:
                 lives = lives - 1 #Takes away a life if wrong
                 print('Letter is not in word')
-
+    
         elif user_letter in used_letters:
             print('You have already guessed that word. Please try again')
 
         else:
             print('You did type an invalid character')
 
+        print("----------------")
+        print("--------------")
+        print("------------")
+
     #Gets here when len(word_letters) == 0
     if lives == 0:
         print(lives_visual_dict[lives])
         print('You died, sorry. The word was', word)
     else:
-        print('you guessed the word', word, '!')
+        print('you guessed the word', word, '!!!')
+    print("------------")
+    print("--------------")
+    print("----------------")
 
 if __name__ == '__main__':
     hangman()
